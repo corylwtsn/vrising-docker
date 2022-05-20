@@ -1,4 +1,4 @@
-name: build_and_push
+name: Container Build
 
 on:
   release:
