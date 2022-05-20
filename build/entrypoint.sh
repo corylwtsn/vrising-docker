@@ -10,4 +10,4 @@ fi
 rm -r /tmp/.X0-lock
 cd server
 Xvfb :0 -screen 0 1024x768x16 & \
-DISPLAY=:0.0 wine VRisingServer.exe -persistentDataPath "$HOME/settings"
+DISPLAY=:0.0 wine VRisingServer.exe -persistentDataPath "$HOME/data"

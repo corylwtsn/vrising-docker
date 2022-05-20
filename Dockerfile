@@ -14,12 +14,12 @@ RUN mkdir -p /home/steam/steamcmd &&\
     cd /home/steam/steamcmd &&\
     curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar xz &&\
     mkdir -p /home/steam/server &&\
-    mkdir -p /home/steam/settings
+    mkdir -p /home/steam/data
 
 
 WORKDIR /home/steam
 ENV HOME /home/steam
-VOLUME /home/steam/settings
+VOLUME /home/steam/data
 
 # Get's killed at the end
 RUN ./steamcmd.sh +login anonymous +quit || :

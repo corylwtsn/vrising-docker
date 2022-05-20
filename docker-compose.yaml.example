@@ -1,0 +1,11 @@
+version: "2.1"
+services: 
+  server:
+    container_name: vrising-server
+    images: vrising:latest
+    volumes:
+      - <PATH_ON_YOUR_DEVICE>:/home/steam/data
+    ports: 
+      - "27015:27015/udp"
+      - "27016:27016/udp"
+    restart: on-failure:5 
